@@ -1,0 +1,374 @@
+/* stylesheet for the quiz, results, leaderboard, and account page */
+
+/* imports a text */
+@import url("https://fonts.googleapis.com/css?family=raleway:300,400,700,900");
+
+/* below is mainly for quiz.php */
+/* applies to everything */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all ease-in-out 400ms;
+}
+
+/* applies to body tag */
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	color:#000;
+}
+
+/* no list indication */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* same line as everything */
+nav li {
+  display: inline-block;
+  margin: 1em;
+}
+
+/* change appearance of a and p tag in the nav */
+nav a,
+nav p {
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .9rem;
+  padding: .5em;
+  color: #FFF;
+}
+
+/* changes color */
+nav a:hover,
+nav a:focus {
+  color: #00ff6c;
+}
+
+/* move to the right hand side if viewed with bigger screen */
+.rightNav {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+}
+
+/* container sets space */
+.container {
+	max-width: 800px;
+	widows: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* register puts a different space with colour to the container */
+.question {
+	background: #F9F9F9;
+	padding: 25px;
+}
+
+/* title of box */
+.question h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+	margin:5px 0 15px;
+	text-align: center;
+}
+
+/* parapraph of box */
+.question p {
+	width: 100%;
+	border: 1px solid #CCC;
+	text-align: center;
+	padding: 1em;
+	font-size: 1.25em;
+	line-height: 2em;
+	background-color: white;
+}
+
+/* below is for the inputs in quiz.php */
+fieldset {
+	border: medium none;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+.question input[type="text"], input[type="number"] {
+	width: 100%;
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin: 10px 0 5px;
+	padding: 10px;
+	font-size: 1em;
+}
+
+select{
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin: 10px 0 5px;
+	padding: 10px;
+}
+
+.question input[type="text"]:hover, input[type="number"]:hover, select:hover {
+	transition: border-color 0.3s ease-in-out;
+	border: 1px solid #000;
+}
+
+.question button[type="submit"] {
+	cursor:pointer;
+	width: 100%;
+	border: none;
+	background: #0CF;
+	color: #FFF;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.question button[type="submit"]:hover {
+	background: #09C;
+	transition:background-color 0.3s ease-in-out;
+}
+
+/* below is for specific questions in question.php */
+.questionTable {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.questionTable td {
+	font-size: 1em;
+	font-weight: 100;
+	margin: 10px;
+}
+
+.questionOption {
+	margin: 10px;
+}
+
+/* specifics of question three */
+.questionThreeTable {
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.questionThreeTable td{
+	height: 150px;
+	width: 250px;
+}
+
+.questionThreeTable img {
+	height: 150px;
+	width: 250px;
+	opacity: .5;
+}
+
+.questionThreeTable input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.questionThreeTable input[type="checkbox"] + img {
+	cursor: pointer;
+}
+
+.questionThreeTable input[type="checkbox"]:checked + img {
+	opacity: 1;
+	transition: opacity 350ms ease-in-out;
+}
+
+.questionThreeTable input[type="checkbox"]:not(:checked) + img {
+	opacity: .5;
+	transition: opacity 350ms ease-in-out;
+}
+
+/* specifics of question five */
+.questionFiveTable {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.questionFiveTable th {
+	text-align: left;
+}
+
+.questionFiveTable td {
+	width: 50%;
+	line-height: 18px;
+	font-size: 0.9em;
+	padding: 1em;
+}
+
+.questionSix p {
+	margin-top: 20px;
+	font-size: 1.25em;
+}
+
+/* specifics of question six */
+.questionSix input[type="text"] {
+	width: 9.9em;
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin: 10px 0 5px;
+	padding: 10px;
+	font-size: 1em;
+}
+
+.questionSix input[type="text"]:hover {
+	transition: border-color 0.3s ease-in-out;
+	border: 1px solid #000;
+}
+
+.images {
+	height: 350px;
+	margin: 0 auto;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 60%
+}
+
+/* Below is mainly for results page */
+/* below applies to the h1 tag */
+h1 {
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* bigger size if viewed with bigger screen */
+@media(min-width: 25rem) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media(min-width: 60rem) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* table results with user answer, acutal answer, and whether incorrect or correct; spread out */
+.scoreTable {
+    width: 60%;
+    margin: 0 auto;
+    max-width: 70em;
+    padding-bottom: 25px;
+}
+
+/* spacing for each box */
+.scoreTable tr, td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+/* makes specifc boxes bigger and bolder; shows importance */
+.boldTableText {
+	font-weight: 1000;
+    font-size: 1.7em;
+}
+
+/* makes specific boxes light and thin; */
+.lightTableText {
+    font-weight: 100;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+/* give a white background; background translucent */
+.resultBackground {
+	background: white;
+	opacity: .9; 
+}
+
+/* table with score, percentage, and result; tigher together */
+.userScoreTable {
+    width: 25%;
+    margin: 0 auto;
+    max-width: 70em;
+}
+
+/* padding on the top */
+.resultScore {
+	padding-top: 40px;
+}
+
+/* specific boxes will have the text aligned to the right; helps symmetry */
+.userRight {
+	text-align: right;
+}
+
+/* specific boxes will have the text aligned to the center; helps symmetry */
+.userCenter {
+	text-align: center;
+}
+
+/* specific boxes will have the text aligned to the left; helps symmetry */
+.userLeft {
+	text-align: left;
+}
+
+/* aligns the buttons to center of page horizontally, add spacing top and bottom */
+.buttonTable {
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* buttons */
+/* a tags represent button, change appearance of a tag */
+.button {
+    font-size: 1.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+/* bigger size of button if viewed with bigger screen */
+@media (min-width: 60rem) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+/* belows are the specific button appearances and effects according to where the button is placed within the page */
+.buttonScore {
+    color: #232323;
+    border-color: #232323;
+}
+
+.buttonScore:hover,
+.buttonScore:focus{
+    background-color: #00ff6c;
+    color: #232323;
+    border-color: #00ff6c;
+}
+
+/* below is mainly for the account page */
+.userAccountTable {
+	width: 50%;
+    margin: 0 auto;
+    max-width: 70em;
+    padding-bottom: 25px;
+}

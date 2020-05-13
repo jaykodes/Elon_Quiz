@@ -1,0 +1,150 @@
+/* stylesheet for the help and screenshot page */
+
+/* imports a text */
+@import url("https://fonts.googleapis.com/css?family=raleway:300,400,700,900");
+
+/* below is mainly for quiz.php */
+/* applies to everything */
+* {
+  	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
+  	transition: all ease-in-out 400ms;
+}
+
+/* applies to body tag */
+body {
+  	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+  	font-weight:300;
+  	font-size: 12px;
+  	color: #000;
+}
+
+/* no list indication */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* same line as everything */
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+/* change appearance of a and p tag in the nav */
+nav a,
+nav p {
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    padding: .5em;
+    color: #FFF;
+}
+
+/* changes color */
+nav a:hover,
+nav a:focus {
+    color: #00ff6c;
+}
+
+img {
+    width: 100%;
+    height: 400px;
+}
+
+/* move to the right hand side if viewed with bigger screen */
+.rightNav {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+}
+
+/* container sets space */
+.container {
+  	max-width: 800px;
+  	widows: 100%;
+  	margin: 0 auto;
+  	position: relative;
+}
+
+/* register puts a different space with colour to the container */
+.background {
+	 background: #F9F9F9;
+	 padding: 25px;
+}
+
+/* header title for page */
+.faqHeader{
+    font-size: 42px;
+    border-bottom: 1px dotted #ccc;
+    padding: 24px;
+}
+
+/* aligns it to be in center horizontally */
+.faqContent {
+    margin: 0 auto;
+}
+
+/* gives the questions a dotted line underneath. better visual aid for user */
+.faqQuestion {
+    padding: 20px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+/* font decisions for the questions */
+.panelTitle {
+    font-size: 22px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 0 48px;
+    display: block;
+    cursor: pointer;
+}
+
+/* font decisions for the answers */
+.panelContent {
+    font-size: 15px;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transition: .4s ease;
+}
+
+/* makes the answers visible once plus is clicked */
+.panel:checked ~ .panelContent{
+    height: auto;
+    opacity: 1;
+    padding: 14px;
+}
+
+/* style for the plus button on the side; clickable */
+.plus {
+    position: absolute;
+    font-size: 38px;
+    line-height: 100%;
+    transition: .2s ease;
+}
+
+/* rotates the plus sign when clicked on */
+.panel:checked ~ .plus {
+    transform: rotate(45deg);
+}
+
+/* removes checkbox mark */
+.panel {
+    display: none;
+}
+
+/* title style for the screenshot page */
+.screenHeader{
+    font-size: 42px;
+    border-bottom: 1px dotted #ccc;
+    padding: 24px;
+    text-align: center;
+}
+

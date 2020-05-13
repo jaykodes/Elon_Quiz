@@ -1,0 +1,123 @@
+/* stylesheet for the login system */
+
+/* applies to everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* applies to body */
+body {
+    background: url(../images/backLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background
+    font-family:"Open Sans", Helvetica, Arial, sans-serif;
+    font-weight:300;
+    font-size: 12px;
+    color:#000;
+}
+
+/* below is for the links */
+a:link {
+    color: #0CF;
+}
+
+a:visited {
+    color: #0CF;
+}
+
+a:hover {
+    color: #09C;
+    transition: color 0.3s ease-in-out;
+}
+
+/* below is to make the form on the right side */
+.split {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.right {
+    right: 0;
+}
+
+/* below is for the registration box */
+/* container sets space */
+.container {
+    max-width: 500px;
+    widows: 100%;
+    margin: 0 auto;
+    position: relative;
+    opacity: 1;
+}
+
+/* register puts a different space with colour to the container */
+.register {
+    background: #F9F9F9;
+    padding: 25px;
+}
+
+/* title of box */
+.register h3 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    margin:5px 0 15px;
+}
+
+/* parapraph of box */
+.register p {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    font-size: 1em;
+}
+
+/* below is for the inputs */
+fieldset {
+    border: medium none;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.register input[type="text"],
+.register input[type="password"] {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 10px 0 5px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.register input[type="text"]:hover,
+.register input[type="password"]:hover {
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #000;
+}
+
+.register button[type="submit"] {
+    cursor:pointer;
+    width: 100%;
+    border: none;
+    background: #0CF;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.register button[type="submit"]:hover {
+    background: #09C;
+    transition:background-color 0.3s ease-in-out;
+}
