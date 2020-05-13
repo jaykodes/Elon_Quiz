@@ -19,13 +19,13 @@
 	function decrypt($dataEncrypt) {
 
 		$encryptMethod = "AES-256-CBC";
-		$secretKey = 'asiuhoisduhfguhsdogusdfoiguhdfog';
-		$secretIv = 'iasudfskldlkjfsw';
+		$secretKey = 'YOUR-SECRET-KEY';
+		$secretIv = 'YOUR-SECRET-IV';
 		$key = hash('sha256', $secretKey);
 		$iv = substr(hash('sha256', $secretIv), 0, 16);
-        $decryptData = openssl_decrypt(base64_decode($dataEncrypt), $encryptMethod, $key, 0, $iv);
+        	$decryptData = openssl_decrypt(base64_decode($dataEncrypt), $encryptMethod, $key, 0, $iv);
 
-        return $decryptData;
+        	return $decryptData;
 	}
 
 	function lowSearch($user, $scores) {
