@@ -6,8 +6,8 @@
 	function encrypt($dataEncrypt) {
 
 		$encryptMethod = "AES-256-CBC";
-		$secretKey = 'asiuhoisduhfguhsdogusdfoiguhdfog';
-		$secretIv = 'iasudfskldlkjfsw';
+		$secretKey = 'YOUR-SECRET-KEY';
+		$secretIv = 'YOUR-SECRET-IV';
 		$key = hash('sha256', $secretKey);
 		$iv = substr(hash('sha256', $secretIv), 0, 16);
 		$encryptData = openssl_encrypt($dataEncrypt, $encryptMethod, $key, 0, $iv);
