@@ -92,7 +92,7 @@
                 <img src="profileImages/unitThreeBack.jpg">
                 <figcaption class="imageDescription">
                     <p>Source Code</p>
-                    <a href="download.zip" class="button buttonDescription buttonSmall">Download</a>
+                    <a href="https://github.com/jaykodes/Elon_Quiz" class="button buttonDescription buttonSmall">Download</a>
                 </figcaption>
             </figure>
         </section>
